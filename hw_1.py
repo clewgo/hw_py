@@ -1,22 +1,26 @@
-def InputNumbers(inputText):
-    is_OK = False
-    while not is_OK:
+# 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным
+
+def in_number(in_text):
+    truefalse = False
+    while not truefalse:
         try:
-            number = int(input(f"{inputText}"))
-            is_OK = True
+            num = int(input(f"{in_text}"))
+            truefalse = True
         except ValueError:
-            print("It's mot a number!")
-    return number
+            print("Это не число")
+    return num
 
 
-def checkNumber(num):
+def check_num(num):
     if 6 <= num <= 7:
-        print("It's a weekend! :)")
+        print("Ура! Выходной")
     elif 0 < num < 6:
-        print("It's a work day")
+        print("Рабочий день")
     else:
-        print("Number outside 7 days")
+        print("Число должно быть больше 1 и меньше 7")
 
 
-num = InputNumbers("Enter the number of the day: ")
-checkNumber(num)
+num = in_number("Введите число, обозначающее день недели: ")
+check_num(num)
+
+# 2. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным
